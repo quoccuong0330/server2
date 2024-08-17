@@ -1,0 +1,26 @@
+<div class="col-12 mt-4 modal-id">
+  <table class="table table-hover">
+    <tr>
+      <th>idDevice</th>
+      <th>Order port</th>
+      <th>Port 1</th>
+      <th>Port 2</th>
+      <th>Hour</th>
+      <th>Minute</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <%for(const item of arrayTimer) {%>
+    <tr class="id-device-<%=item._id%> ">
+      <td><%=item.idDevice%></td>
+      <td><%=item.valueOrder%></td>
+      <td><%=item.valuePort1%></td>
+      <td><%=item.valuePort2%></td>
+      <td><%=item.valueHour%></td>
+      <td><%=item.valueMinute%></td>
+      <td><%=item.status%></td>
+      <td><btn class="btn btn-danger" onclick="handleDeleteTimer('<%=item._id%>')">Delete</btn></td>
+    </tr>
+    <%}%>
+  </table>
+</div>

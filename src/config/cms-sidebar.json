@@ -1,0 +1,66 @@
+[
+  {
+    "page_id": "a1",
+    "title": "Điều kiển thiết bị",
+    "href": "/control-device",
+    "page_name": "page/control-device",
+    "child": []
+  },
+  {
+    "page_id": "a2",
+    "title": "Chỉnh sửa thiết bị",
+    "href": "/edit-device",
+    "page_name": "page/edit-device",
+    "child": []
+  },
+  {
+    "page_id": "a6",
+    "title": "Thêm thiết bị",
+    "href": "/add-device",
+    "page_name": "page/add-device",
+    "child": []
+  },
+  {
+    "page_id": "a3",
+    "title": "Config",
+    "href": "/config",
+    "page_name": "page/config",
+    "child": []
+  },
+  {
+    "page_id": "a4",
+    "title": "Info",
+    "href": "/info",
+    "page_name": "page/info",
+    "child": []
+  },
+  {
+    "page_id": "a5",
+    "title": "Data",
+    "href": "/data",
+    "page_name": "page/data",
+    "child": []
+  },
+  {
+    "page_id": "a7",
+    "title": "Timer",
+    "href": "/timer/set",
+    "page_name": "page/set-timer",
+    "child": [
+      {
+        "page_id": "a71",
+        "title": "Set timer",
+        "href": "/timer/set",
+        "page_name": "page/set-timer",
+        "child": []
+      },
+      {
+        "page_id": "a72",
+        "title": "History timer",
+        "href": "/timer/history",
+        "page_name": "page/history-timer",
+        "child": []
+      }
+    ]
+  }
+]

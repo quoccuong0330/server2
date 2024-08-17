@@ -1,0 +1,25 @@
+<div class="container modal-id">
+  <!-- <button onclick="findPortByUSB()" class="btn btn-primary mt-2">
+    Quet usb
+  </button>
+  <div class="list-port-1"></div> -->
+
+  <div class="mt-5">
+    <label class="label-timer">ID device: </label>
+    <input id="id-device" />
+    <button class="btn btn-primary" onclick="handleAddNewDevice()">Save</button>
+    <div class="mb-2">
+      <label for="id" class="label-timer">Type: </label>
+      <input type="radio" id="light" name="type-device" value="light" class="mr-2" />
+      <label for="light">Light</label>
+      <input
+        type="radio"
+        id="temperature"
+        class="mr-2 ml-2"
+        name="type-device"
+        value="temperature"
+      />
+      <label for="temperature">Temperature</label>
+    </div>
+  </div>
+</div>

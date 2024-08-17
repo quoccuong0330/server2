@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Roboto-Condensed-B;
+  src: url(fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-Condensed-R;
+  src: url(fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(fonts/roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(fonts/roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Aligrah-Medium;
+  src: url(fonts/Aligarh_Medium/Aligarh-Medium.ttf);
+}
+@font-face {
+  font-family: Lemonada-Regular;
+  src: url(fonts/Lemonada/static/Lemonada-Regular.ttf);
+}
+@font-face {
+  font-family: Signika-Regular;
+  src: url(fonts/Signika/static/Signika-Regular.ttf);
+}
+@font-face {
+  font-family: Vollkorn-Regular;
+  src: url(fonts/Vollkorn/static/Vollkorn-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Roboto-Regular, Montserrat-Medium, sans-serif;
+}
+/* --------------------- */
+
+/* --------------------- */
+button:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+}

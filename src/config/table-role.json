@@ -1,0 +1,12 @@
+{
+    "block": {
+        "root": [],
+        "superadmin": [
+            "a6"
+        ],
+        "admin": [
+            "a1",
+            "a6"
+        ]
+    }
+}

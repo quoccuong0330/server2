@@ -1,0 +1,35 @@
+{
+    "cors": {
+        "origin": "*",
+        "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "OPTIONS"
+        ],
+        "allowedHeaders": [
+            "Content-Type",
+            "Authorization"
+        ],
+        "optionsSuccessStatus": "200"
+    },
+    "cors_": {
+        "origin": "*",
+        "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "OPTIONS"
+        ],
+        "allowedHeaders": [
+            "Content-Type",
+            "Authorization",
+            "Accept"
+        ],
+        "optionsSuccessStatus": "200",
+        "credentials": true,
+        "preflightContinue": true
+    }
+}

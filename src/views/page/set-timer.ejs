@@ -1,0 +1,63 @@
+<script>
+    // Serialize the array of objects
+    var portArray = <%- JSON.stringify(portArray) %>;
+</script>
+
+<div class="container mt-5 modal-id">
+    <div class="col-12  ">
+        <div class="mb-2 d-flex">
+            <label for="id" class="label-timer">Chose device: </label>
+
+                <%if(deviceArray.length > 0) {%>
+                    <% for(const item of deviceArray) { %>
+                        <div class="ml-2"><input type="radio" id="<%=item.idDevice%>" name="idDevice" onchange="handleChoseIdDevice(this,portArray)" value="<%=item.idDevice%>" />
+                        <label for="<%=item.idDevice%>"><%=item.idDevice%></label></div>
+                    <%}%>
+                <%}%>
+        </div>
+
+        <div class="mb-2 d-flex">
+            <label for="id" class="label-timer">Order port: </label>
+            <select name="name-order" id="name-order" onchange="handleChangeColor()">
+                
+            </select>
+        </div>
+
+        <div class="mb-2 d-flex port1-ip-timer align-items-center">
+       
+            <label for="id" class="label-timer">Port 1:    
+            </label>
+            <input class=" ip-timer" id="ip-p1" min="0" max="100" onchange="validateInputTimer(this,'p1')"/>
+        
+            <label class="lb-timer-required d-none lb-port1 ">Required: 0 - 100</label>
+        </div>
+
+        <div class="mb-2 d-flex port2-ip-timer align-items-center">
+            <label for="id" class="label-timer">Port 2: </label>
+            <input class=" ip-timer" id="ip-p2" onchange="validateInputTimer(this,'p2')" />
+            <label class="lb-timer-required d-none lb-port2">Required: 0 - 100</label>
+        </div>
+
+        <div class="mb-2 d-flex">
+            <label for="id" class="label-timer">Hour: </label>
+            <input class=" ip-timer" id="ip-hh" onchange="validateInputTimer(this,'hh')" />
+            <label class="lb-timer-required d-none lb-hour">Required: 1 - 24</label>
+        </div>
+
+        <div class="mb-2 d-flex">
+            <label for="id" class="label-timer ">Minute: </label>
+            <input class=" ip-timer" id="ip-mm" onchange="validateInputTimer(this,'mm')" />
+            <label class="lb-timer-required lb-minute d-none">Required: 0 - 59</label>
+        </div>
+
+            <!-- <div class="mb-2 d-flex">
+                <label for="id" class="label-timer ">Status: </label>
+                <input type="radio" id="active" name="status" value="active" />
+                <label for="active">active</label>
+                <input type="radio" id="inactive" class="ml-2" name="status" value="inactive" />
+                <label for="inactive">inactive</label>
+            </div> -->
+        
+        <button class="btn btn-primary" onclick="submitTimer()">Submit</button>
+    </div>
+</div>

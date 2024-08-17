@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aligarh';
+    src: local('Aligarh Medium'), local('Aligarh-Medium'),
+        url('Aligarh-Medium.woff2') format('woff2'),
+        url('Aligarh-Medium.woff') format('woff'),
+        url('Aligarh-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }

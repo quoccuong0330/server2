@@ -1,0 +1,103 @@
+/*-- color --*/
+:root {
+  --bg-dark-1: #263744;
+  --bg-dark-2: #1e2530;
+  --bg-light-1: #f5f7fb;
+  --bg-light-2: rgba(255, 255, 255, 0.2);
+  --text-light: #fff;
+  --text-dark: #282c2d;
+  --primary-color: #0d6efd;
+  --active-color: #42a5f5;
+  --bg-blue-light: #f2f7fb;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto-Bold;
+}
+/* ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/*-- important style --*/
+.gap-md,
+.gap-sm,
+.gap-lg,
+.gap-xs {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+.gap-sm {
+  height: 30px;
+}
+.gap-xs {
+  height: 10px;
+}
+.gap-lg {
+  height: 100px;
+}
+.mg-pd-none {
+  padding: 0;
+  margin: 0;
+}
+.large-size {
+  font-size: 30px !important;
+}
+.medium-size {
+  font-size: 18px !important;
+}
+.small-size {
+  font-size: 14px !important;
+}
+.xsmall-size {
+  font-size: 12px !important;
+}
+.hidden {
+  overflow: hidden !important;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.unset {
+  position: unset !important;
+}
+@media only screen and (max-width: 991px) {
+  .mg-pd-none-mb {
+    padding: 0;
+    margin: 0;
+  }
+  .xsmall-size {
+    font-size: 8px !important;
+  }
+  .small-size {
+    font-size: 12px !important;
+  }
+  .medium-size {
+    font-size: 14px !important;
+  }
+  .large-size {
+    font-size: 20px !important;
+  }
+  .small-size {
+    font-size: 10px !important;
+  }
+}

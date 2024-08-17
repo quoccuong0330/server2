@@ -1,0 +1,35 @@
+<div class="wrap-sidebar">
+    <div class="sidebar">
+        <ul>
+            <% for (const key of sidebar) { if(block_table.indexOf(key.page_id)<0){ %>
+                <li>
+                    <div class="line <%=key.page_id==active_page.parent_id?'active':'' %>">
+                        <a href="<%=key.href%>">
+                            <%=key.title%>
+                        </a>
+                        <% if(key.child.length>0){
+                            %>
+                            <a href="#" class="wrap-arrow my-dropdown-button" dropdown-menu-name="#<%=key.page_id%>">
+                                <img class="arrow-down" src="/cms/images/index/arrow-down.png" alt="">
+                            </a>
+                            <% } %>
+                    </div>
+                    <% if(key.child.length>0){
+                        %>
+                        <div class="wrap-child <%=key.page_id==active_page.parent_id?'':'d-none' %>"
+                            id="<%=key.page_id%>">
+                            <ul>
+                                <% for (const key2 of key.child) { %>
+                                    <li class="<%=key2.page_id==active_page.page_id?'active':'' %>"><a
+                                            href="<%=key2.href%>">
+                                            <%=key2.title%>
+                                        </a></li>
+                                    <% } %>
+                            </ul>
+                        </div>
+                        <% } %>
+                </li>
+                <% } } %>
+        </ul>
+    </div>
+</div>

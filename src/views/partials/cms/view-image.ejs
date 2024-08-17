@@ -1,0 +1,65 @@
+<div class="wrap-view-image">
+  <div class="d-flex justify-content-between">
+    <div class="ml-4 mt-2">
+      <%if(typeUpload == 'general') {%>
+        <div class="btn btn-primary">General</div>
+      <%} else if(typeUpload == 'post') {%>
+        <div class="btn btn-primary">Post</div>
+        <%} else if(typeUpload =='product') {%>
+          <div class="btn btn-primary">Product</div>
+        <%}%>
+    </div>
+    <div class="mr-4 mt-2">
+      <button class="btn-close-modal btn btn-danger">Close</button>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+
+  <form class="d-flex justify-content-center" method="post" enctype="multipart/form-data">
+    <input class="form-control input-form-control input-upload"   name="file" type="file" multiple />
+  </form>
+  <div class="d-flex justify-content-center">
+    <a type-image="<%=typeUpload%>"  class=" btn btn-primary mt-2 btn-upload-image" onclick="handleUploadImage()" >Upload</a>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="d-flex">
+    <%if(typeUpload == 'general') {%>
+      <a class="btn btn-primary ml-4 mb-2" onclick="handleSubmitGeneral()">Submit</a>
+
+    <%} else if(typeUpload == 'post') {%>
+      <a class="btn btn-primary ml-4 mb-2" onclick="handleSubmitPost()">Submit</a>
+
+      <%} else if(typeUpload == 'product') {%>
+      <a class="btn btn-primary ml-4 mb-2 " onclick="handleSubmitProduct()">Submit</a>
+  
+      <%}%>
+  </div>
+  <ul class="d-flex flex-wrap ml-4 mr-2" id="list-image">
+   <% if (typeof arrayImage !== 'undefined' && arrayImage.length > 0) { %>
+        <% arrayImage.forEach(function(item) { %>
+        <li   class=" mr-1 mb-1 mt-1 wrap-image">
+          <% if(typeUpload =='product') { %>
+              <label class="lb" for="ip-checkbox <%=item.id%>"> 
+                <img  src="<%=item.url%>" class="image-upload"  />
+                <input id-item="<%=item.id%>" name="image-check" url="<%=item.url%>" type="checkbox" id="ip-checkbox <%=item.id%>" >
+              </label>
+            <%} else {%>
+                <label class="lb" for="ip-checkbox <%=item.id%>"> 
+                  <img  src="<%=item.url%>" class="image-upload"  />
+                  <input id-item="<%=item.id%>" name="image-check" url="<%=item.url%>" type="radio" id="ip-checkbox <%=item.id%>">
+                </label>
+            <%}%>
+              </li>
+
+        <% }); %>
+    <% } else { %>
+
+    <%}%>
+    </ul>
+  
+</div>
+

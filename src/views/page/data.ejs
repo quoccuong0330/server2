@@ -1,0 +1,24 @@
+<div class="container modal-id mt-5">
+ <div class="d-flex mb-2">
+    <% for(const item of arrayDevice) { %>
+       <div class="col-4">
+            <input type="checkbox" id="<%=item.idPort%>" name="<%=item.idPort%>" class="cb-id-port mr-1" value="<%=item.idPort%>" />
+            <label for="<%=item.idPort%>"> <%=item.idPort%></label><br />
+       </div>
+    <%}%>
+</div>
+
+    <div class="col-12">
+        <label for="from-date">From:</label>
+        <input type="date" id="from-date" name="from">
+        <label for="to-date">To:</label>
+        <input type="date" id="to-date" name="to">
+    
+    </div>
+ <div class="d-flex justify-content-center mt-2"> </div>
+ <button onclick="handleFilter1()">Tim kiem</button>
+ <button onclick="handleExportData()" class="d-none btn-download" >Download </button>
+ <div id="result">
+    
+ </div>
+</div>

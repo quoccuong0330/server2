@@ -1,0 +1,81 @@
+
+<div class="container mt-5 modal-id">
+ 
+  <div class="col-12 ">
+    <%let arrayID = []%>
+    <% for(const item of arrayDevice) { %>
+        <% arrayID.push(item[0].idPort)%>
+        <div class="bg-wrap-form  %>">
+            <div class="list-row tag-content">
+                <div class="wrap-content d-flex justify-content-between align-items-center">
+                    <div class="section-content">
+                        <div class="">
+                            <label id="label-text-<%=item[0].idPort %>" for="inp0">ID device: <%= item[0].idPort %></label>
+                          </div>
+                    </div>
+                    <a href="#" class="wrap-arrow my-dropdown-button outline-btn btn-primary " dropdown-menu-name="#section-id-<%=item[0].idPort %>">
+                        Mở rộng
+                    </a>
+                </div>
+               
+                <div class="extension d-none flex-wrap" id="section-id-<%=item[0].idPort %>">
+                    <% for(const itemPort of item) { %>
+                       
+                        <div class="col-6 mt-2 <%=item[0].idPort %>">
+                             <div class="col-12 p-3 wrapper-port " >
+                                 <!-- <p class=" d-flex justify-content-center number-port-<%=itemPort.portNumber%>">ID device: <%=itemPort.portNumber%></p> -->
+                              <div class="d-flex justify-content-between">
+                                    <div>
+                                         <label class="label-port" for="" style="width: 60px;">Name</label>
+                                         <input class="ip-name-<%=itemPort.idPort%>-<%=itemPort.order%> mb-2" type="text" value="<%=itemPort.name%>">
+                                         </br>
+                                         <label class="label-port" for="" style="width: 60px;">Order</label>
+        
+                                         <input class="ip-order-<%=itemPort.idPort%>-<%=itemPort.order%> mb-2" disabled  type="number" value="<%=itemPort.order%>">
+                                    </div>
+                                   <div class="d-flex justify-content-around flex-column">
+                                         <div>
+                                            <label for="color-port-1-<%=itemPort.idPort%>-<%=itemPort.order%>" class="mr-2">Color port 1 </label>
+                                            <select  name="port1" id="color-port-1-<%=itemPort.idPort%>-<%=itemPort.order%>" style="width: 80px;">
+                                                <option  value="light" <%= itemPort.colorPort1 === 'light' ? 'selected' : '' %> >Light</option>
+                                                <option  value="red" <%= itemPort.colorPort1 === 'red' ? 'selected' : '' %>>Red</option>
+                                                <option  value="blue" <%= itemPort.colorPort1 === 'blue' ? 'selected' : '' %>>Blue</option>
+                                            </select>
+                                       </div>
+                                       <div>
+                                        <label class="mr-2" for="color-port-2-<%=itemPort.idPort%>-<%=itemPort.order%>">Color port 2</label>
+                                        <select name="port2" id="color-port-2-<%=itemPort.idPort%>-<%=itemPort.order%>"  style="width: 80px;">
+                                            <option  value="light" <%= itemPort.colorPort2 === 'light' ? 'selected' : '' %> >Light</option>
+                                            <option  value="red" <%= itemPort.colorPort2 === 'red' ? 'selected' : '' %>>Red</option>
+                                            <option  value="blue" <%= itemPort.colorPort2 === 'blue' ? 'selected' : '' %>>Blue</option>
+                                        </select>
+                                   </div>
+                                   </div>
+                              </div>
+                                 
+                               <div>
+                                     <label class="label-port" style="width: 60px;" for="">Active </label>
+                                     <% if(itemPort.isActive==="true") {%>
+                                        <input type="checkbox" class="ip-active-<%=itemPort.idPort%>-<%=itemPort.order%> " id="<%= item[0].idPort %>" checked></input>
+                                    <%} else {%>
+                                        <input type="checkbox"  class="ip-active-<%=itemPort.idPort%>-<%=itemPort.order%> " id="<%= item[0].idPort %>" ></input>
+                                    <%}%>
+                               </div>
+                             
+                             </div>
+                        </div>
+                     <%}%>
+                     <div class="col-12 mt-2 d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary" onclick="handleEditPort('<%=item[0].idPort%>')">Save</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    <%}%>
+
+  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include('../partials/cms/meta.ejs') %>
+        <%- include('../partials/cms/import-header.ejs') %>
+
+            <title>
+                <%= active_page.title %>
+            </title>
+
+</head>
+
+<body>
+    <%- body %>
+        <!-- footer -->
+        <%- include('../partials/cms/footer.ejs') %>
+
+</body>
+
+<%- include('../partials/cms/import-footer.ejs') %>
+    <script src="/cms/scripts/login.js"></script>
+
+</html>
